@@ -1,0 +1,85 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Restaurent",
+    "dateExported": "2023-12-20T13:29:55.677Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "35b9c161-790f-4198-8cb0-0dacb7eda586",
+            "colId": "b3333368-b72e-4f6f-9970-178187d19c50",
+            "containerId": "",
+            "name": "voucher_create",
+            "url": "http://127.0.0.1:8000/api/v1/voucher/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-20T05:33:00.201Z",
+            "modified": "2023-12-20T06:19:23.035Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Voucher 50 to 100\",\n  \"purchase_value\": 11,\n  \"validity\":\"2023-12-30\",\n  \"credit_value\": 22,\n  \"description\":\"Test\",\n  \"restaurent\": 1,\n  \"voucher_count\": 10\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bdbf33d1-ab34-4343-b167-6b5c2601ffc9",
+            "colId": "b3333368-b72e-4f6f-9970-178187d19c50",
+            "containerId": "",
+            "name": "CustomerPurchase",
+            "url": "http://127.0.0.1:8000/api/v1/purchase/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-20T07:46:55.402Z",
+            "modified": "2023-12-20T08:00:11.579Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer\":1,\n  \"restaurent\": 1,\n  \"voucher_value\": 11\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8f373466-1df5-4711-b50e-fa1880b0fc38",
+            "colId": "b3333368-b72e-4f6f-9970-178187d19c50",
+            "containerId": "",
+            "name": "Redeem",
+            "url": "http://127.0.0.1:8000/api/v1/redeem/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-12-20T12:46:25.119Z",
+            "modified": "2023-12-20T13:08:56.916Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer\": 1,\n  \"restaurent\": 1,\n  \"bill_amount\": 25,\n  \"coupon_code\": \"a7e15e40-2f6b-4c9e-ba4d-c2869dadce03\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d09e86db-df4b-4a4f-9a87-a56a2ff37a90",
+            "colId": "b3333368-b72e-4f6f-9970-178187d19c50",
+            "containerId": "",
+            "name": "customer_voucher",
+            "url": "http://127.0.0.1:8000/api/v1/customer_voucher/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-12-20T13:20:47.695Z",
+            "modified": "2023-12-20T13:29:29.737Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
